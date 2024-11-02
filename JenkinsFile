@@ -28,10 +28,9 @@ pipeline {
         stage('Push image to Docker Hub'){
             steps{
                 script{
-                   bat "docker context use default"
-                      withDockerRegistry(credentialsId: 'docker-credentials') {
-                   bat "docker build -t benjazuniga/prestabanco-backend:latest ."
-                   bat "docker push benjazuniga/prestabanco-backend:latest"
+                   withDockerRegistry(credentialsId: 'docker-credentials') {
+                      bat "docker build -t benjazuniga/prestabanco-backend:latest ."
+                      bat "docker push benjazuniga/prestabanco-backend:latest"
                         }
                 }
             }
