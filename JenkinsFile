@@ -29,7 +29,6 @@ pipeline {
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker-credentials') {
-                      bat "docker build -t benjazuniga/prestabanco-backend:latest ."
                       bat "docker push benjazuniga/prestabanco-backend:latest"
                         }
                 }
