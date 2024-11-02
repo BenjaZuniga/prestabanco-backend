@@ -21,7 +21,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    bat 'docker build -t mtisw/book_service:latest .'
+                    bat 'docker build -t benjazuniga/prestabanco-backend:latest .'
                 }
             }
         }
