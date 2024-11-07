@@ -26,7 +26,7 @@ public class UserRespositoryTest {
 
 
     @Test
-    public void whenExistUser_thenReturnTrue() {
+    public void testExistsByMail1() {
         UserEntity user = new UserEntity();
         user.setMail("cliente@mail.com");
         entityManager.persistAndFlush(user);
@@ -36,7 +36,7 @@ public class UserRespositoryTest {
     }
 
     @Test
-    public void whenExistUser_thenReturnFalse() {
+    public void testExistsByMail2() {
         UserEntity user = new UserEntity();
         user.setMail("cliente@mail.com");
         entityManager.persistAndFlush(user);
@@ -45,7 +45,7 @@ public class UserRespositoryTest {
         assertThat(exist).isFalse();
     }
 
-    @Test void whenFindBymail_thenReturnUser() {
+    @Test void testFindByMail() {
         UserEntity user = new UserEntity();
         user.setMail("cliente@mail.com");
         entityManager.persistAndFlush(user);

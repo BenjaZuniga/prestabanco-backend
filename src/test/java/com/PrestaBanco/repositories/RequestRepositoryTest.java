@@ -23,7 +23,7 @@ public class RequestRepositoryTest {
     private RequestRepository requestRepository;
 
     @Test
-    public void whenFindByOwnerId_thenReturnRequests() {
+    public void testFindByOwnerId() {
         RequestEntity request1 = new RequestEntity(null,(long)1,null,null, null, 0, null, null, null);
 
         RequestEntity request2 = new RequestEntity();

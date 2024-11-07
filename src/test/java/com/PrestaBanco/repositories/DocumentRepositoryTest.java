@@ -24,7 +24,7 @@ public class DocumentRepositoryTest {
     private DocumentRepository documentRepository;
 
     @Test
-    public void whenFindByRequestId_thenReturnDocuments() {
+    public void testFindByRequestId() {
         // given
 
         DocumentEntity document1 = new DocumentEntity(null, (long) 2, "Aprobado", null);
